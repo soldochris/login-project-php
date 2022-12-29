@@ -21,7 +21,7 @@ if (isset($_POST['login'])) {
       //create session form the user
       $_SESSION['userId'] = $user -> id;
       //redirect to index page
-      header('Location: http://localhost:8888/login-project/index.php');
+      header('Location: http://localhost:8888/login-project-php/index.php');
     }else{
       $wrongLogin = "Email or password is wrong";
     }

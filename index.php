@@ -29,7 +29,7 @@
                 <h5>Welcome Guest</h5>
             <?php }?>
         </div>
-        <div class="car-body">
+        <div class="card-body">
             <?php if(isset($user)){ ?>
                 <h5>This is a super secret content only for logged in people</h5>
             <?php } else {?>

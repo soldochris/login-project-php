@@ -25,7 +25,7 @@ if (isset($_POST['register'])) {
     } else {
       $stmt = $pdo -> prepare('INSERT into users(name, email, password) VALUES(?, ?, ?) ');
       $stmt-> execute([$userName, $userEmail, $passwordHashed]);
-      header('Location: http://localhost:8888/login-project/index.php');
+      header('Location: http://localhost:8888/login-project-php/index.php');
     }
   }
   
