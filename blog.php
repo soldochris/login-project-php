@@ -17,7 +17,14 @@ if(isset($_SESSION['userId'])){
 ?>
 
 <?php require('./inc/header.html')?>
+<?php require('./inc/newPost.html')?>
+
 <div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Create New Post</button>
+    </div>
+  </div>
   <?php foreach($posts as $post){ ?>
   <div class="card">
     <div class="card-header bg-ligh mb-3"><?php echo $post -> title ?></div>
@@ -27,4 +34,5 @@ if(isset($_SESSION['userId'])){
   </div>
   <?php } ?>
 </div>
+
 <?php require('./inc/footer.html')?>

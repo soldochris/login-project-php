@@ -47,3 +47,7 @@ input{
 .card{
     margin-top: 50px;
 }
+
+.row .col-sm-12 button{
+    margin-top: 45px;
+}
