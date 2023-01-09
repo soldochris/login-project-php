@@ -20,12 +20,13 @@
             $stmt -> execute();
             $users = $stmt -> fetchAll();
         }
-
     }
+    
+    $counter = 0;
 ?>
 
 <?php require('./inc/header.html'); ?>
-
+<?php require('./inc/modal.html'); ?>
 <div class="container">
     <div class="card bg-light mb-3">
         <div class="card-header">
@@ -55,11 +56,15 @@
                                         <?php } ?>
                                     </select>
                                     <button class="btn btn-primary" type="submit" name="superEdit">Update</button>
+                                    <button name="superDelete" class="d-none delete<?php echo $counter ?>" type="submit" id="btnDeleteForm"></button>
+                                    <button class="btn btn-danger btnModal" type="button" data-toggle="modal" data-target="#exampleModal">Delete User</button>
+                                    <input type="hidden" value="delete<?php echo $counter ?>">
                                 </li>
                                 <input type="hidden" name="targetUserId" value="<?php echo $loopUser->id ?>"/>
                             <?php }?>
                         </ul>
                     </form>
+                    <?php $counter++ ?>
                 <?php } ?>
                 <?php if(isset($_GET['updated'])){ ?>
                     <p class="link-success"><?php echo $_GET['updated']?></p>
